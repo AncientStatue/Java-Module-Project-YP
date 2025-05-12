@@ -1,14 +1,14 @@
 public class Race {
-	String leadingCarName = "";
-	int distanceLeaderWent = 0;
-	int time = 24;
-	public String findLeader(String name, int speed) {
-		int distance = this.time * speed;
+	private String leadingCarName = "";
+	private int distanceLeaderWent = 0;
+	private final int time = 24;
+	public void findLeader(Car car) {
+		int distance = this.time * car.speed;
 		if(distance > this.distanceLeaderWent) {
-			this.leadingCarName = name;
-			return this.leadingCarName;
-		} else {
-			return this.leadingCarName;
+			this.leadingCarName = car.name;
 		}
+	}
+	public String getLeadingCarName() {
+		return this.leadingCarName;
 	}
 }
